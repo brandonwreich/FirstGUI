@@ -29,13 +29,13 @@ public class GUIPanel extends JPanel
 	
 	private void setupPanel()
 	{
-		//SpringLayout is very customizable and is a lot better than the default
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 	}
 	
 	/**
 	 * This is used to hold all the layout and arrangement code for SpringLayout.
+	 * SpringLayout is very customizable and is a lot better than the default.
 	 */
 	
 	private void setupLayout()
