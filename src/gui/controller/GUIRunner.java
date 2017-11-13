@@ -1,4 +1,9 @@
 package gui.controller;
+/**
+ * 
+ * @author Brandon Reich
+ *
+ */
 
 public class GUIRunner
 {
