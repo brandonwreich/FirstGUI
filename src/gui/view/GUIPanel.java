@@ -29,6 +29,7 @@ public class GUIPanel extends JPanel
 	
 	private void setupPanel()
 	{
+		//SpringLayout is very customizable and is a lot better than the default
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 	}
