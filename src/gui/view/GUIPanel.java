@@ -1,10 +1,18 @@
 package gui.view;
 
 import gui.controller.GUIAppController;
+
+//Needed for the class
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
+
+//Needed for the layout
 import javax.swing.SpringLayout;
+
+//Needed for the button to work
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUIPanel extends JPanel
 {
@@ -19,9 +27,9 @@ public class GUIPanel extends JPanel
 		firstButton = new JButton("Wow a button");
 		baseLayout = new SpringLayout();
 		
-		
 		setupPanel();
 		setupLayout();
+		setupListeners();
 	}
 	
 	/**
@@ -43,8 +51,8 @@ public class GUIPanel extends JPanel
 	
 	private void setupLayout()
 	{
-		baseLayout.putConstraint(SpringLayout.NORTH, firstButton, 200, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 200, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -134, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, firstButton, -150, SpringLayout.EAST, this);
 	}
 	
 	/**
@@ -53,6 +61,21 @@ public class GUIPanel extends JPanel
 	
 	private void setupListeners()
 	{
+		firstButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				changeBackgroundColor();
+			}
+		});
+	}
+	
+	private void changeBackgroundColor()
+	{
+		int red= (int) (Math.random() * 256);
+		int green = (int) (Math.random() * 256);
+		int blue = (int) (Math.random() * 256);
 		
+		this.setBackground(new Color(red, green, blue));
 	}
 }
