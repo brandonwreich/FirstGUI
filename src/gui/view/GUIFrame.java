@@ -17,6 +17,9 @@ public class GUIFrame extends JFrame
 		setupFrame();
 	}
 	
+	/**
+	 * Sets up the framework
+	 */
 	private void setupFrame()
 	{
 		this.setContentPane(firstPanel);
